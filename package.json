@@ -1,0 +1,22 @@
+{
+  "name": "company-profile-generator",
+  "version": "1.0.0",
+  "description": "profile-generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReemMDA99/Company-profile-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReemMDA99/Company-profile-generator/issues"
+  },
+  "homepage": "https://github.com/ReemMDA99/Company-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}
