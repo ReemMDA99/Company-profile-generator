@@ -11,5 +11,5 @@ test('test to get constructor value for Manager object', () => {
 
 //get role
 test('get employee Role', () => {
-     expect(manager.getRole()).toBe("Manager");
+     expect(manager.getRole()).toBe('Manager');
 });
