@@ -80,6 +80,33 @@ const createInternCard = function (Intern) {
      
     `;
 }
+ // create a loop for all of the employees
+function createCards(team) {
+    let page = []
+    for(let i = 0; i < team.length; i++) {
+    const teamMembers = team[i];
+        switch(teamMembers.getRole()) {
+            case 'Manager' :
+            const manager = new Manager(teamMembers.name, teamMembers.id, teamMembers.email, teamMembers.officeNumber);
+            page.push(createManagerCard(manager));
+            break;
+            
+            case 'Engineer' :
+            const engineer = new Engineer(teamMembers.name, teamMembers.id, teamMembers.email, teamMembers.githubUsername);
+            page.push(createEngineerCard(engineer));
+            break;
+
+            case 'Intern' :
+                const intern = new Intern(teamMembers.id, teamMembers.name, teamMembers.email, teamMembers.school);
+                page.push(createInternCard(intern));
+                break;
+        }
+    }
+    // join the page blocks
+    return page.join(``)
+}
+
+
 // generate team page
 const generateTeamPage = function(team) {
     console.log(team)
@@ -108,7 +135,7 @@ const generateTeamPage = function(team) {
     </header>
     <main>
         <div class="justify-content-center d-flex flex-row flex -wrap">
-            ${generateTeamPage(team)}
+            ${createCards(team)}
         </div>
     </main>
       
@@ -120,6 +147,5 @@ const generateTeamPage = function(team) {
 
     `;
 }
-
-// export to index
+// export function to generate entire page
 module.exports = generateHtml;
