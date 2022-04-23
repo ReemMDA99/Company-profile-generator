@@ -4,28 +4,45 @@ const Engineer = require ('../lib/Engineer');
 const Intern = require('../lib/Intern');
 
 // create Manager card
-const createManager = function (manager) {
-
+const createManagerCard = function (Manager) {
     return `
-    <div 
-    `
+    <div class="card h-100" style="width: 18rem">
+        <div class='card-header'>
+            <h4 class ="card-title">
+                ${Manager.getName()}
+            </h4>
+            <br/>
+            <h5 class = "card-text">
+                ${Manager.getRole()}
+                <i class="far fa-mug-hot"></i>
+            </h5>
+        </div>
 
+        <div class= "card-body">
+            <p class= "id"> Employee ID: ${Manager.getId()}</p>
+            <p class= "email"> Email: <a href="mailto: ${Manager.getEmail()}">${Manager.getEmail()}</a> </p>
+            <p class= "office"> Office Number: ${Manager.getOfficeNumber()}</p>
+        </div>
+
+    </div>   
+     
+    `;
 }
 // create Engineer card
-const createEngineer = function (engineer) {
+const createEngineerCard = function (Engineer) {
     return `
 
 `
 }
 
 // create Intern card
-const createIntern = function (intern) {
+const createInternCard = function (Intern) {
     return `
 
 `
 }
 // generate team page
-const generateTeamPage = function (team) {
+const generateTeamPage = function(team) {
     console.log(team)
     return`
 
