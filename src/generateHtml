@@ -25,21 +25,60 @@ const createManagerCard = function (Manager) {
         </div>
 
     </div>   
-     
+
     `;
 }
 // create Engineer card
 const createEngineerCard = function (Engineer) {
     return `
+    <div class="card h-100" style="width: 18rem">
+        <div class='card-header'>
+            <h4 class ="card-title">
+                ${Engineer.getName()}
+            </h4>
+            <br/>
+            <h5 class = "card-text">
+                ${Engineer.getRole()}
+                <i class="fa-solid fa-glasses"></i>
+            </h5>
+        </div>
 
-`
+        <div class= "card-body">
+            <p class= "id"> Employee ID: ${Engineer.getId()}</p>
+            <p class= "email"> Email: <a href="mailto: ${Engineer.getEmail()}">${Engineer.getEmail()}</a> </p>
+            <p class= "github"> Github Username: <a href="https://github.com/${Engineer.getGitHub()}">${Engineer.getGitHub()}</a></p>
+        </div>
+
+    </div>   
+     
+    `;
 }
+
 
 // create Intern card
 const createInternCard = function (Intern) {
     return `
+    <div class="card h-100" style="width: 18rem">
+        <div class='card-header'>
+            <h4 class ="card-title">
+                ${Intern.getName()}
+            </h4>
+            <br/>
+            <h5 class = "card-text">
+                ${Intern.getRole()}
+                <i class="fa-solid fa-user-graduate"></i>
+            </h5>
+        </div>
 
-`
+        <div class= "card-body">
+            <p class= "id"> Employee ID: ${Intern.getId()}</p>
+            <p class= "email"> Email: <a href="mailto: ${Intern.getEmail()}">${Intern.getEmail()}</a> </p>
+            <p class= "school"> School: ${Intern.getSchool()}</p>
+        </div>
+
+    </div>   
+     
+    `;
 }
 // generate team page
 const generateTeamPage = function(team) {
