@@ -1,6 +1,32 @@
+
+const Manager = require('../lib/Manager');
+const Engineer = require ('../lib/Engineer');
+const Intern = require('../lib/Intern');
+
+// create Manager card
+const createManager = function (manager) {
+
+    return `
+    <div 
+    `
+
+}
+// create Engineer card
+const createEngineer = function (engineer) {
+    return `
+
+`
+}
+
+// create Intern card
+const createIntern = function (intern) {
+    return `
+
+`
+}
 // generate team page
-const generateTeamPage = function (teamCards) {
-    console.log(teamCards)
+const generateTeamPage = function (team) {
+    console.log(team)
     return`
 
 <!DOCTYPE html>
@@ -26,7 +52,7 @@ const generateTeamPage = function (teamCards) {
     </header>
     <main>
         <div class="justify-content-center d-flex flex-row flex -wrap">
-            ${generateTeamPage(teamCards)}
+            ${generateTeamPage(team)}
         </div>
     </main>
       
