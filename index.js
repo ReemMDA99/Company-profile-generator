@@ -71,13 +71,13 @@ const askManager = () => {
                 }
             }
         },
-        // {
-        //     type: 'list',
-        //     name: 'menu',
-        //     message: 'Please select which option you would like to continue with:',
-        //     choices: ['Engineer', 'Intern', 'No more Employees'],
+        {
+            type: 'list',
+            name: 'menu',
+            message: 'Please select which option you would like to continue with:',
+            choices: ['Engineer', 'Intern', 'No more Employees'],
             
-        // }
+        }
     ])
     .then((managerInput) => {
         const manager = new Manager(
