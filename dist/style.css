@@ -32,3 +32,13 @@ main{
 #github {
     color:rgba(0, 0, 255, 0.584);
 }
+
+footer {
+    padding: 10px;
+    font-size: 2em;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 2px;;
+
+}

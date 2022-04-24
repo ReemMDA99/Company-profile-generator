@@ -145,6 +145,11 @@ const generateTeamPage = function(team) {
             ${createCards(team)}
         </div>
     </main>
+    <footer>
+        <div class="bg-danger text-white">
+            <h4> Made by Reem Ahmed <img src="https://img.icons8.com/material-rounded/24/000000/like--v1.png"/></h4>
+        </div>
+    </footer>
       
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
