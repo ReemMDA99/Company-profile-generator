@@ -186,7 +186,7 @@ const askEngineer = () => {
         )
         teamMembers.push(engineer)
 
-        switch(askEngineer.menu) {
+        switch(engineerInput.menu) {
             case 'Engineer':
                 askEngineer();
             break;
