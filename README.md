@@ -36,7 +36,8 @@ THEN I exit the application, and the HTML is generated
 
 
 ## Screenshot
-![Screenshot]("./images/Picture1.png")
+![Picture1](https://user-images.githubusercontent.com/94458512/164998675-43cc0b4e-fdd9-4690-9354-44e56101d1e2.png)
+)
 
 ## Walkthrough video of Team Profile Generator page
 
