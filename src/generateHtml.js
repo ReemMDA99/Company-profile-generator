@@ -6,7 +6,7 @@ const Intern = require('../lib/Intern');
  // create a loop for all of the employees
  function createCards(team) {
     let page = []
-    for(let i = 0; i < team.length; i++) {
+    for (let i = 0; i < team.length; i++) {
     const teamMembers = team[i];
         switch(teamMembers.getRole()) {
             // call manager function
@@ -74,8 +74,8 @@ const createEngineerCard = function (Engineer) {
 
         <div class= "card-body">
             <p class= "id"> Employee ID: ${Engineer.getId()}</p>
-            <p class= "email"> Email: <a href="mailto: ${Engineer.getEmail()}">${Engineer.getEmail()}</a> </p>
-            <p class= "github"> Github Username: <a href="https://github.com/${Engineer.getGitHub()}">${Engineer.getGitHub()}</a></p>
+            <p class= "email"> Email: <a href="mailto: ${Engineer.getEmail()}">${Engineer.getEmail()}</a></p>
+            <p class= "github"> Github Username: <a href="https://github.com/${Engineer.getGitHub()}" target="_blank">${Engineer.getGitHub()}</a></p>
         </div>
 
     </div>   
@@ -85,9 +85,9 @@ const createEngineerCard = function (Engineer) {
 
 
 // create Intern card
-const createInternCard = function (Intern) {
+const createInternCard = function(Intern) {
     return `
-    <div class="card border border border-info rounded-left h-100" style="width: 20rem">
+    <div class="card border border border-info rounded-left h-100" style="width:20rem">
         <div class="card-header bg-info text-white">
             <h4 class ="card-title">
                 ${Intern.getName()}

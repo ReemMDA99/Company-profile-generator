@@ -1,5 +1,5 @@
 //require source generateHtml file
-const generateHtml = require('./src/generateHtml');
+const generateHtml = require('./src/generateHtml.js');
 
 //require node module packages
 const inquirer = require('inquirer');
@@ -169,8 +169,13 @@ const askEngineer = () => {
                 }
             }
         },
-     
-
+        {
+            type: 'list',
+            name: 'menu',
+            message: 'Please select which option you would like to continue with:',
+            choices: ['Engineer', 'Intern', 'No more Employees'],
+            
+        }
     ])
     .then ((engineerInput) => {
         const engineer =  new Engineer(
@@ -182,10 +187,12 @@ const askEngineer = () => {
         teamMembers.push(engineer)
 
         switch(askEngineer.menu) {
-            case 'Engineer':askEngineer();
+            case 'Engineer':
+                askEngineer();
             break;
             
-            case 'Intern' :askIntern();
+            case 'Intern':
+                askIntern();
             break;
             
             default: 
@@ -246,7 +253,7 @@ const askIntern = () => {
             name: 'school',
             message: 'Please enter team Intern\'s school name (Required)',
             validate: school => {
-                if (school) {
+                if(school) {
                     return true;
                 } else {
                     console.log('Please enter team Intern\'s school name');
@@ -255,7 +262,6 @@ const askIntern = () => {
             }
         },
         {
-        
             type: 'list',
             name: 'menu',
             message:'Please select which option you would like to continue with:',
@@ -278,8 +284,7 @@ const askIntern = () => {
             
             case 'Intern' : askIntern();
             break;
-            default:
-                writeToFile('./dist/index.html', generateHtml(teamMembers))
+            default: writeToFile('./dist/index.html', generateHtml(teamMembers))
         }
     }) 
 }
