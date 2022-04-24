@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(255, 238, 216);
+}
+header {
+    padding: 10px;
+    font-size: 2em;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+main{
+    
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.card {
+    padding: 8px;
+    margin: 12px;
+    border: 0px;
+
+}
+.card-text {
+    font-size: 24px;
+}
+.card-body {
+    font-size: 19px;
+    background-color: rgb(255, 255, 255);
+}
+
+#email {
+    color:rgba(0, 0, 255, 0.584);
+}
+#github {
+    color:rgba(0, 0, 255, 0.584);
+}

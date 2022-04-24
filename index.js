@@ -1,3 +1,6 @@
+//require source generateHtml file
+const generateHtml = require('./src/generateHtml');
+
 //require node module packages
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -7,13 +10,12 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-//require source generateHtml file
-const generateHtml = require ('./src/generateHtml');
+
 
 //create empty array for team
-const teamArray = [];
+const teamMembers = [];
 
-//Create prompts if 'Engineer' is selected
+//Create prompts if 'Manager' is selected
 const askManager = () => {
    
         return inquirer.prompt([
@@ -86,7 +88,7 @@ const askManager = () => {
         managerInput.emailId,
         managerInput.officeNumber)
     
-        teamArray.push(manager);
+        teamMembers.push(manager);
         switch (managerInput.menu) {  
 
             case 'Engineer' : askEngineer();
@@ -96,7 +98,7 @@ const askManager = () => {
             break;
 
             default:
-            writeToFile('./dist/index.html', generateHtml(teamArray))
+            writeToFile('./dist/index.html', generateHtml(teamMembers))
         
         }
         
@@ -172,23 +174,22 @@ const askEngineer = () => {
     ])
     .then ((engineerInput) => {
         const engineer =  new Engineer(
-            
             engineerInput.name,
-            engineerInput.employeeID,
+            engineerInput.employeeId,
             engineerInput.emailId,
             engineerInput.githubUsername
         )
-        teamArray.push(engineer)
+        teamMembers.push(engineer)
 
         switch(askEngineer.menu) {
-            case 'Engineer': askEngineer();
+            case 'Engineer':askEngineer();
             break;
             
             case 'Intern' :askIntern();
             break;
             
             default: 
-            writeToFile('./dist/index.html', generateHtml(teamArray))
+            writeToFile('./dist/index.html', generateHtml(teamMembers))
         }
     })
 };
@@ -269,7 +270,7 @@ const askIntern = () => {
             internInput.emailId,
             internInput.school
         )
-        teamArray.push(intern)
+        teamMembers.push(intern)
 
         switch(internInput.menu) {
             case 'Engineer' : askEngineer();
@@ -278,7 +279,7 @@ const askIntern = () => {
             case 'Intern' : askIntern();
             break;
             default:
-                writeToFile('./dist/index.html', generateHtml(teamArray))
+                writeToFile('./dist/index.html', generateHtml(teamMembers))
         }
     }) 
 }
@@ -286,8 +287,8 @@ askManager();
 
 // function to generate HTML page file using file system 
 
-const writeFile = data => {
-    fs.writeFile('./dist/index.html', data, err =>{
+const writeToFile = (filename,data) => {
+    fs.writeFile(filename, data, err =>{
         //if error return error
         if(err) {
             console.log(err);
