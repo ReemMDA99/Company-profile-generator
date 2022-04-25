@@ -296,8 +296,8 @@ const askIntern = () => {
 
 // function to generate HTML page file using file system 
 
-const generateFile = (filename, data) => {
-    fs.writeFile(filename, data, err =>{
+const generateFile = (file, data) => {
+    fs.writeFile(file , data, (err) => {
         //if error return error
         if(err) {
             console.log(err);
