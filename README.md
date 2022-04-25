@@ -19,6 +19,7 @@ Build an application based on Node.js. It is a Team Profile Generator which allo
 - Add the team members like Engineer, Manager and Interns by answering all the required prompts.
 - When all the members are added, the HTML page is generated in 'dist' folder from where we can view the page in browser.
 - To test the application use 'npm test' command in terminal. 
+
 ## User Story
 
 AS A manager
@@ -52,7 +53,9 @@ THEN I exit the application, and the HTML is generated
 
 ## Walkthrough video of Team Profile Generator page
 
+![GIF](./images/team%20Profile%20Gen.gif) 
 
+https://drive.google.com/file/d/16-MU6_x8-_cIwcFXNhneIXRg-B2xkFAM/view
 
 Walkthrough video demonstrates the following criteria:
 - All four test (Employee, Manager, Engineer and Inter) passing from the command line
@@ -72,6 +75,7 @@ https://github.com/ReemMDA99/Company-profile-generator
 https://github.com/ReemMDA99/Company-profile-generator/blob/develop/dist/index.html
 
 - Link to the Walkthrough video using Google Drive URL:
+https://drive.google.com/file/d/16-MU6_x8-_cIwcFXNhneIXRg-B2xkFAM/view
 
 ## Tests
 Run npm test to run Jest for tests on constructors.
