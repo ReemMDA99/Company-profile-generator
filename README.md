@@ -58,6 +58,7 @@ THEN I exit the application, and the HTML is generated
 https://drive.google.com/file/d/16-MU6_x8-_cIwcFXNhneIXRg-B2xkFAM/view
 
 Walkthrough video demonstrates the following criteria:
+
 - All four test (Employee, Manager, Engineer and Inter) passing from the command line
 
 - How a user would invoke the application from the command line.
@@ -71,14 +72,14 @@ Walkthrough video demonstrates the following criteria:
 - GitHub Repository URL: 
 https://github.com/ReemMDA99/Company-profile-generator
 
-- Link to the sample HTML file generated using application URL: 
+- Link to the sample HTML file generated using application: 
 https://github.com/ReemMDA99/Company-profile-generator/blob/develop/dist/index.html
 
-- Link to the Walkthrough video using Google Drive URL:
+- Link to the Walkthrough video using Google Drive:
 https://drive.google.com/file/d/16-MU6_x8-_cIwcFXNhneIXRg-B2xkFAM/view
 
 ## Tests
-Run npm test to run Jest for tests on constructors.
+Run 'npm test' to run Jest for tests on constructors.
 
 ## License
 This application is protected by following License: 
@@ -87,4 +88,5 @@ This application is protected by following License:
 
 ## Contributor
 
-Reem Ahmed : reem.mda0909@gmail.com
+By Reem Mohammed Ahmed.
+Contact : reem.mda0909@gmail.com

@@ -1,7 +1,88 @@
 
+// create Manager card
 const Manager = require('../lib/Manager');
+const createManagerCard = function (Manager) {
+    return `
+    <div class="card border border border-info rounded-left h-100" style="width: 20rem">
+        <div class="card-heading bg-info text-white">
+            <h4 class ="card-role">
+                ${Manager.getName()}
+            </h4>
+            <br/>
+            <h5 class = "card-icon">
+                ${Manager.getRole()}
+                <i class="fas fa-mug-hot"></i>
+            </h5>
+        </div>
+
+        <div class= "card-main">
+            <p class= "id"> Employee ID: ${Manager.getId()}</p>
+            <p class= "email"> Email: <a href="mailto: ${Manager.getEmail()}">${Manager.getEmail()}</a> </p>
+            <p class= "office"> Office Number: ${Manager.getOfficeNumber()}</p>
+        </div>
+
+    </div>   
+
+    `;
+}
+// create Engineer card
 const Engineer = require ('../lib/Engineer');
+const createEngineerCard = function (Engineer) {
+    return `
+    <div class="card border border border-info rounded-left h-100" style="width: 20rem">
+        <div class="card-heading bg-info text-white">
+            <h4 class ="card-role">
+                ${Engineer.getName()}
+            </h4>
+            <br/>
+            <h5 class = "card-icon">
+                ${Engineer.getRole()}
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-eyeglasses" viewBox="0 0 16 16">
+                    <path d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A1.993 1.993 0 0 0 8 6c-.532 0-1.016.208-1.375.547zM14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                  </svg>
+            </h5>
+        </div>
+
+        <div class= "card-main">
+            <p class= "id"> Employee ID: ${Engineer.getId()}</p>
+            <p class= "email"> Email: <a href="mailto: ${Engineer.getEmail()}">${Engineer.getEmail()}</a></p>
+            <p class= "github"> Github Username: <a href="https://github.com/${Engineer.getGitHub()}" target="_blank">${Engineer.getGitHub()}</a></p>
+        </div>
+
+    </div>   
+     
+    `;
+}
+
+
+// create Intern card
 const Intern = require('../lib/Intern');
+const createInternCard = function(Intern) {
+    return `
+    <div class="card border border border-info rounded-left h-100" style="width:20rem">
+        <div class="card-heading bg-info text-white">
+            <h4 class ="card-role">
+                ${Intern.getName()}
+            </h4>
+            <br/>
+            <h5 class = "card-icon">
+                ${Intern.getRole()}
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+                    <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+                    <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+                  </svg>
+            </h5>
+        </div>
+        <div class= "card-main">
+            <p class= "id"> Employee ID: ${Intern.getId()}</p>
+            <p class= "email"> Email: <a href="mailto: ${Intern.getEmail()}">${Intern.getEmail()}</a> </p>
+            <p class= "school"> School: ${Intern.getSchool()}</p>
+        </div>
+
+    </div>   
+     
+    `;
+}
 
  // create a loop for all of the employees
  function createCards(team) {
@@ -29,91 +110,6 @@ const Intern = require('../lib/Intern');
     // joining strings 
     return page.join(``)
 }
-
-// create Manager card
-const createManagerCard = function (Manager) {
-    return `
-    <div class="card border border border-info rounded-left h-100" style="width: 20rem">
-        <div class="card-header bg-info text-white">
-            <h4 class ="card-title">
-                ${Manager.getName()}
-            </h4>
-            <br/>
-            <h5 class = "card-text">
-                ${Manager.getRole()}
-                <i class="fas fa-mug-hot"></i>
-            </h5>
-        </div>
-
-        <div class= "card-body">
-            <p class= "id"> Employee ID: ${Manager.getId()}</p>
-            <p class= "email"> Email: <a href="mailto: ${Manager.getEmail()}">${Manager.getEmail()}</a> </p>
-            <p class= "office"> Office Number: ${Manager.getOfficeNumber()}</p>
-        </div>
-
-    </div>   
-
-    `;
-}
-// create Engineer card
-const createEngineerCard = function (Engineer) {
-    return `
-    <div class="card border border border-info rounded-left h-100" style="width: 20rem">
-        <div class="card-header bg-info text-white">
-            <h4 class ="card-title">
-                ${Engineer.getName()}
-            </h4>
-            <br/>
-            <h5 class = "card-text">
-                ${Engineer.getRole()}
-                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-eyeglasses" viewBox="0 0 16 16">
-                    <path d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A1.993 1.993 0 0 0 8 6c-.532 0-1.016.208-1.375.547zM14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
-                  </svg>
-            </h5>
-        </div>
-
-        <div class= "card-body">
-            <p class= "id"> Employee ID: ${Engineer.getId()}</p>
-            <p class= "email"> Email: <a href="mailto: ${Engineer.getEmail()}">${Engineer.getEmail()}</a></p>
-            <p class= "github"> Github Username: <a href="https://github.com/${Engineer.getGitHub()}" target="_blank">${Engineer.getGitHub()}</a></p>
-        </div>
-
-    </div>   
-     
-    `;
-}
-
-
-// create Intern card
-const createInternCard = function(Intern) {
-    return `
-    <div class="card border border border-info rounded-left h-100" style="width:20rem">
-        <div class="card-header bg-info text-white">
-            <h4 class ="card-title">
-                ${Intern.getName()}
-            </h4>
-            <br/>
-            <h5 class = "card-text">
-                ${Intern.getRole()}
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
-                    <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
-                    <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
-                  </svg>
-            </h5>
-        </div>
-
-        <div class= "card-body">
-            <p class= "id"> Employee ID: ${Intern.getId()}</p>
-            <p class= "email"> Email: <a href="mailto: ${Intern.getEmail()}">${Intern.getEmail()}</a> </p>
-            <p class= "school"> School: ${Intern.getSchool()}</p>
-        </div>
-
-    </div>   
-     
-    `;
-}
-
-
 // generate team page
 const generateTeamPage = function(team) {
     console.log(team)

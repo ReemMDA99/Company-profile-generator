@@ -11,12 +11,16 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 
-
 //create empty array for team
 const teamMembers = [];
 
 //Create prompts if 'Manager' is selected
 const askManager = () => {
+    console.log(`
+    ===============
+    Add a Manager
+    ===============
+    `);
    
         return inquirer.prompt([
         {
@@ -98,7 +102,7 @@ const askManager = () => {
             break;
 
             default:
-            writeToFile('./dist/index.html', generateHtml(teamMembers))
+            generateFile('./dist/index.html', generateHtml(teamMembers))
         
         }
         
@@ -196,7 +200,7 @@ const askEngineer = () => {
             break;
             
             default: 
-            writeToFile('./dist/index.html', generateHtml(teamMembers))
+            generateFile('./dist/index.html', generateHtml(teamMembers))
         }
     })
 };
@@ -284,15 +288,15 @@ const askIntern = () => {
             
             case 'Intern' : askIntern();
             break;
-            default: writeToFile('./dist/index.html', generateHtml(teamMembers))
+            default: generateFile('./dist/index.html', generateHtml(teamMembers))
         }
     }) 
 }
-askManager();
+
 
 // function to generate HTML page file using file system 
 
-const writeToFile = (filename,data) => {
+const generateFile = (filename, data) => {
     fs.writeFile(filename, data, err =>{
         //if error return error
         if(err) {
@@ -306,3 +310,4 @@ const writeToFile = (filename,data) => {
     })
 };
 
+askManager();
