@@ -7,6 +7,17 @@ This challenge is to build a Node.js command-line application that takes in info
 ## Description
 Build an application based on Node.js. It is a Team Profile Generator which allows to input the information about a team and  generates an HTML webpage that displays summaries for each person. 
 
+## Installation
+
+- Type in terminal npm i or npm install to install dependency packages needed.
+- Ensure the following packages are installed.
+   1. Inquirer
+    2. Jest
+
+- Navigate to index.js file in terminal
+- Input node app.js in the terminal to initiate the application
+- Add the team members like Engineer, Manager and Interns by answering all the required prompts.
+- When all the members are added, the HTML page is generated in 'dist' folder from where we can view the page in browser.
 
 ## User Story
 
@@ -59,6 +70,9 @@ Walkthrough video demonstrates the following criteria:
 
 - Link to the Walkthrough video using Google Drive :
 
+## Tests
+Run npm test to run Jest for tests on constructors.
+
 ## License
 This application is protected by following License: 
 
@@ -66,4 +80,4 @@ This application is protected by following License:
 
 ## Contributor
 
-Reem Ahmed
+Reem Ahmed : reem.mda0909@gmail.com
