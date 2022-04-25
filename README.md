@@ -11,14 +11,14 @@ Build an application based on Node.js. It is a Team Profile Generator which allo
 
 - Type in terminal npm i or npm install to install dependency packages needed.
 - Ensure the following packages are installed.
-   1. Inquirer
-    2. Jest
+   1. Inquirer: npm install inquirer
+    2. Jest : npm i jest -g (globally install jest)
 
 - Navigate to index.js file in terminal
 - Input node app.js in the terminal to initiate the application
 - Add the team members like Engineer, Manager and Interns by answering all the required prompts.
 - When all the members are added, the HTML page is generated in 'dist' folder from where we can view the page in browser.
-
+- To test the application use 'npm test' command in terminal. 
 ## User Story
 
 AS A manager
@@ -65,11 +65,13 @@ Walkthrough video demonstrates the following criteria:
 
 ## Links to the challenge application
 
-- GitHub Repository URL:
+- GitHub Repository URL: 
+https://github.com/ReemMDA99/Company-profile-generator
 
-- Link to the sample HTML file generated using application : 
+- Link to the sample HTML file generated using application URL: 
+https://github.com/ReemMDA99/Company-profile-generator/blob/develop/dist/index.html
 
-- Link to the Walkthrough video using Google Drive :
+- Link to the Walkthrough video using Google Drive URL:
 
 ## Tests
 Run npm test to run Jest for tests on constructors.
