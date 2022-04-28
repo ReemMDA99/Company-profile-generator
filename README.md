@@ -55,7 +55,7 @@ THEN I exit the application, and the HTML is generated
 
 ![GIF](./images/team%20Profile%20Gen.gif) 
 
-https://drive.google.com/file/d/16-MU6_x8-_cIwcFXNhneIXRg-B2xkFAM/view
+https://drive.google.com/file/d/115G0HgeB257_uFActt3wZDeL6I4KYjxu/view?usp=sharing
 
 Walkthrough video demonstrates the following criteria:
 
@@ -76,7 +76,7 @@ https://github.com/ReemMDA99/Company-profile-generator
 https://github.com/ReemMDA99/Company-profile-generator/blob/develop/dist/index.html
 
 - Link to the Walkthrough video using Google Drive:
-https://drive.google.com/file/d/16-MU6_x8-_cIwcFXNhneIXRg-B2xkFAM/view
+https://drive.google.com/file/d/115G0HgeB257_uFActt3wZDeL6I4KYjxu/view?usp=sharing
 
 ## Tests
 Run 'npm test' to run Jest for tests on constructors.
